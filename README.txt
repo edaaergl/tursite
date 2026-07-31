@@ -84,24 +84,29 @@ Aynı klasörde kullanılmayan 10 fotoğraf daha var (çoğu farklı misafirlerl
 kompozisyonlar) — isterseniz bunlarla galeriye/kartlara daha fazla çeşitlilik
 eklenebilir.
 
+GERÇEK İŞLETME FOTOĞRAFLARI — İKİNCİ PARTİ (Desktop\Yeni klasör'den, 31.07.2026'de eklendi)
+------------------------------------------------------------------------------------
+Bu partide ATV turlarından ve klasik otomobil + balon buluşmalarından gerçek fotoğraflar
+eklendi, aşağıdaki stok/eski dosyaların yerine kondu:
+hero-1.jpg, hero-2.jpg, tour-atv-sunrise.jpg, tour-atv-sunset.jpg, tour-atv-viewpoint.jpg,
+tour-atv-family.jpg, gallery-3.jpg, gallery-5.jpg, gallery-6.jpg, gallery-7.jpg, gallery-8.jpg
+
+Kaynak fotoğraflar (orijinal, yüksek çözünürlüklü hallerini istediğinizde kullanmak için)
+Desktop\Yeni klasör klasörüne geri taşındı. O klasörde ayrıca kullanılmayan birkaç fotoğraf
+daha var (bir adam modelin klasik otomobille poz verdiği WhatsApp fotoğrafı gibi) —
+isterseniz ileride galeriye eklenebilir. IMG_1501.HEIC dosyası şu an bu bilgisayarda
+açılamadığı için hiç kullanılmadı; isterseniz iPhone/Mac üzerinden JPEG'e çevirip
+gönderebilirsiniz.
+
 KALAN STOK FOTOĞRAF KAYNAKLARI (Pexels License — ticari kullanım serbest, atıf zorunlu değil)
 ------------------------------------------------------------------------------------
-hero-1.jpg             https://www.pexels.com/photo/hot-air-balloons-at-sunrise-in-cappadocia-34183941/
-hero-2.jpg             https://www.pexels.com/photo/two-people-riding-atv-on-desert-2986409/
+Not: hero-1, hero-2, tour-atv-sunrise, tour-atv-sunset, tour-atv-viewpoint, tour-atv-family,
+gallery-3, gallery-5, gallery-6, gallery-7 ve gallery-8 artık gerçek işletme fotoğrafı
+(yukarıdaki "İKİNCİ PARTİ" notuna bakın) — bu yüzden aşağıdaki listeden çıkarıldılar.
+Hâlâ stok kalan tek görseller (gallery-1, gallery-2, gallery-4 ilk partide değişmişti, bu
+listeden zaten çıkarılmıştı):
 hero-4.jpg             https://www.pexels.com/photo/cappadocia-red-valley-in-turkey-18676075/
-tour-atv-sunrise.jpg   https://www.pexels.com/photo/men-posing-on-quads-on-desert-20734802/
-tour-atv-sunset.jpg    https://www.pexels.com/photo/person-riding-an-atv-drifting-on-sand-5976872/
 tour-combo.jpg         https://www.pexels.com/photo/aerial-view-of-rock-formations-in-cappadocia-turkey-19328648/
-tour-atv-viewpoint.jpg https://www.pexels.com/photo/a-couple-sitting-on-top-of-a-hill-with-hot-air-balloons-flying-around-them-in-cappadocia-turkey-15834105/
-tour-atv-family.jpg    https://www.pexels.com/photo/two-people-riding-atv-on-desert-2986409/
-gallery-1.jpg          https://www.pexels.com/photo/urgup-nevsehir-kizilcukur-vadisi-12809807/
-gallery-2.jpg          https://www.pexels.com/photo/view-of-hot-air-balloons-flying-over-cappadocia-turkey-19228322/
-gallery-3.jpg          https://www.pexels.com/photo/men-posing-on-quads-on-desert-20734802/
-gallery-4.jpg          https://www.pexels.com/photo/people-in-vintage-car-on-desert-15750673/
-gallery-5.jpg          https://www.pexels.com/photo/love-valley-in-cappadocia-13291644/
-gallery-6.jpg          https://www.pexels.com/photo/person-riding-an-atv-drifting-on-sand-5976872/
-gallery-7.jpg          https://www.pexels.com/photo/ancient-uchisar-castle-in-cappadocia-turkey-31034652/
-gallery-8.jpg          https://www.pexels.com/photo/rocky-landscape-during-sunset-5320133/
 
 CSS'İ YENİDEN DERLEME (yalnızca index.html'e YENİ bir Tailwind class'ı eklerseniz gerekir)
 --------------------------------------------------------------------------------------------
