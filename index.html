@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Golden Grape Travel — Kapadokya ATV ve Klasik Otomobil Turları</title>
+<meta name="description" content="Kapadokya'da gün doğumu ve gün batımı ATV turları, klasik otomobil ile vadi turları. Göreme'den kalkış, WhatsApp üzerinden anında rezervasyon." />
+
+<link rel="stylesheet" href="assets/css/tailwind.css" />
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body class="bg-app font-body antialiased">
+
+<!-- ================= NAV ================= -->
+<header id="site-nav" class="sticky top-0 z-40">
+  <nav class="max-w-7xl mx-auto flex items-center justify-between px-5 md:px-8 py-4">
+    <a href="#top" class="flex items-center gap-3">
+      <img src="assets/img/logo.jpeg" alt="Golden Grape Travel logosu" class="w-11 h-11 rounded-full object-cover shadow-glow border-2 border-white/40" />
+      <span class="font-display font-bold text-lg leading-none">Golden Grape<br /><span class="text-[11px] tracking-[0.15em] font-bold opacity-70">TRAVEL</span></span>
+    </a>
+
+    <div class="hidden md:flex items-center gap-4 lg:gap-8 eyebrow">
+      <a href="#turlar" class="nav-link">Turlar</a>
+      <a href="#nasil" class="nav-link">Nasıl Çalışır</a>
+      <a href="#galeri" class="nav-link">Galeri</a>
+      <a href="#sss" class="nav-link">SSS</a>
+      <a href="#iletisim" class="nav-link">İletişim</a>
+    </div>
+
+    <div class="flex items-center gap-3">
+      <button id="theme-toggle" aria-label="Tema değiştir" class="w-10 h-10 grid place-items-center rounded-full bg-surface border border-hair hover:border-coral transition-colors">
+        <svg id="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+        <svg id="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="hidden"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/></svg>
+      </button>
+      <a data-wa-text="Merhaba! Golden Grape Travel hakkında bilgi almak istiyorum." href="#" class="wa-link hidden lg:inline-flex items-center gap-2 bg-sunset text-white font-display font-bold uppercase tracking-wide text-sm px-5 py-2.5 rounded-full shadow-glow hover:brightness-105 transition">
+        WhatsApp'tan Yaz
+      </a>
+      <button id="menu-toggle" class="md:hidden w-10 h-10 grid place-items-center rounded-full border border-hair" aria-label="Menüyü aç">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <div id="mobile-menu" class="hidden md:hidden mx-4 mb-3 rounded-3xl bg-surface border border-hair shadow-soft px-6 py-5 flex flex-col gap-4 eyebrow">
+    <a href="#turlar" class="mobile-link">Turlar</a>
+    <a href="#nasil" class="mobile-link">Nasıl Çalışır</a>
+    <a href="#galeri" class="mobile-link">Galeri</a>
+    <a href="#sss" class="mobile-link">SSS</a>
+    <a href="#iletisim" class="mobile-link">İletişim</a>
+    <a data-wa-text="Merhaba! Golden Grape Travel hakkında bilgi almak istiyorum." href="#" class="wa-link bg-sunset text-white text-center font-display font-bold uppercase text-sm px-5 py-3 rounded-full">WhatsApp'tan Yaz</a>
+  </div>
+</header>
+
+<!-- ================= HERO SLIDER (header'dan bağımsız, ayrı bölüm) ================= -->
+<section id="top" class="relative min-h-[560px] md:min-h-[680px] lg:min-h-[760px] overflow-hidden bg-ink" aria-roledescription="carousel" aria-label="Kapadokya öne çıkan görselleri">
+  <div id="hero-track" class="absolute inset-0">
+    <div class="hero-slide absolute inset-0" data-index="0" data-active="true">
+      <img src="assets/img/hero-1.jpg" alt="Kapadokya'da balonlarla gün doğumu" class="w-full h-full object-cover object-center" />
+      <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/55 to-ink/10"></div>
+      <p class="absolute top-24 md:top-28 left-5 md:left-8 eyebrow text-white/75 text-shadow-img">01 — Gün Doğumu</p>
+    </div>
+    <div class="hero-slide absolute inset-0" data-index="1">
+      <img src="assets/img/hero-2.jpg" alt="Vadide ATV turu" class="w-full h-full object-cover object-bottom" />
+      <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/55 to-ink/10"></div>
+      <p class="absolute top-24 md:top-28 left-5 md:left-8 eyebrow text-white/75 text-shadow-img">02 — ATV Turu</p>
+    </div>
+    <div class="hero-slide absolute inset-0" data-index="2">
+      <img src="assets/img/hero-3.jpg" alt="Peri bacaları önünde klasik otomobil" class="w-full h-full object-cover object-bottom" />
+      <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/55 to-ink/10"></div>
+      <p class="absolute top-24 md:top-28 left-5 md:left-8 eyebrow text-white/75 text-shadow-img">03 — Klasik Otomobil</p>
+    </div>
+    <div class="hero-slide absolute inset-0" data-index="3">
+      <img src="assets/img/hero-4.jpg" alt="Kızılçukur'da gün batımı" class="w-full h-full object-cover object-center" />
+      <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/55 to-ink/10"></div>
+      <p class="absolute top-24 md:top-28 left-5 md:left-8 eyebrow text-white/75 text-shadow-img">04 — Gün Batımı</p>
+    </div>
+  </div>
+
+  <div class="relative z-10 min-h-[560px] md:min-h-[680px] lg:min-h-[760px] max-w-7xl mx-auto px-5 md:px-8 flex flex-col justify-end pb-20 md:pb-24">
+    <div class="inline-flex w-fit items-center gap-2 mb-5 px-4 py-2 rounded-full bg-sunset shadow-glow">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff" aria-hidden="true" class="shrink-0"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg>
+      <span class="text-white text-xs sm:text-sm font-display font-bold uppercase tracking-wide">Bölgenin Tek En Büyük 300cc ATV'leri</span>
+    </div>
+    <h1 class="font-display font-bold text-4xl sm:text-5xl md:text-7xl leading-[1.05] mb-6 max-w-3xl text-white text-balance text-shadow-img">
+      Tozlu Patikalardan<br />
+      <span class="bg-sunset bg-clip-text text-transparent [text-shadow:none]">Krom Parlayan</span> Yollara
+    </h1>
+    <p class="max-w-xl text-base md:text-lg leading-relaxed mb-9 text-white/80 font-semibold text-shadow-img">
+      Kızılçukur'da gün batımını izleyin, Aşk Vadisi'nde ATV ile toz kaldırın ya da klasik bir otomobille peri bacaları arasında keyifli bir tur atın. İki farklı hızda, tek bir Kapadokya.
+    </p>
+    <div class="flex flex-wrap gap-4 mb-12">
+      <a href="#turlar" class="inline-block bg-sunset text-white font-display font-bold uppercase tracking-wide px-8 py-4 rounded-full shadow-glow hover:brightness-105 transition">Turları İncele</a>
+      <a data-wa-text="Merhaba! Golden Grape Travel hakkında bilgi almak istiyorum." href="#" class="wa-link inline-flex items-center gap-2 bg-white/10 backdrop-blur border border-white/30 text-white font-display font-bold uppercase tracking-wide px-8 py-4 rounded-full hover:bg-white/20 transition">
+        <svg width="18" height="18" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.386.699 4.607 1.902 6.472L4 29l7.72-1.86A11.94 11.94 0 0 0 16.001 27C22.628 27 28 21.627 28 15S22.628 3 16.001 3zm0 21.6c-1.98 0-3.83-.55-5.41-1.5l-.386-.23-4.58 1.103 1.127-4.463-.252-.398A9.57 9.57 0 0 1 5.4 15c0-5.85 4.75-10.6 10.6-10.6S26.6 9.15 26.6 15 21.85 24.6 16 24.6z"/><path d="M21.62 17.68c-.31-.155-1.83-.903-2.114-1.006-.284-.104-.49-.155-.697.155-.207.31-.8 1.006-.982 1.213-.18.207-.362.233-.671.078-.31-.155-1.31-.483-2.495-1.54-.922-.822-1.545-1.837-1.727-2.147-.18-.31-.02-.478.136-.632.14-.14.31-.362.465-.543.155-.181.207-.31.31-.517.104-.207.052-.388-.026-.543-.078-.155-.697-1.68-.955-2.3-.252-.605-.508-.523-.697-.533-.18-.009-.388-.011-.595-.011s-.543.078-.828.388c-.284.31-1.086 1.061-1.086 2.587s1.112 3.001 1.267 3.208c.155.207 2.19 3.343 5.306 4.687.742.32 1.32.512 1.771.655.744.237 1.42.204 1.955.124.596-.089 1.83-.748 2.088-1.47.258-.723.258-1.343.181-1.47-.078-.129-.284-.207-.594-.362z"/></svg>
+        WhatsApp'tan Yaz
+      </a>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 max-w-2xl">
+      <div><p class="font-display font-bold text-2xl md:text-3xl bg-sunset bg-clip-text text-transparent">500+</p><p class="text-xs tracking-wide text-white/65 font-bold">Ağırlanan Misafir</p></div>
+      <div><p class="font-display font-bold text-2xl md:text-3xl bg-sunset bg-clip-text text-transparent">4.9<span class="text-base">/5</span></p><p class="text-xs tracking-wide text-white/65 font-bold">Ortalama Puan</p></div>
+      <div><p class="font-display font-bold text-2xl md:text-3xl bg-sunset bg-clip-text text-transparent">2</p><p class="text-xs tracking-wide text-white/65 font-bold">Deneyim: ATV & Klasik</p></div>
+    </div>
+  </div>
+
+  <button id="hero-prev" aria-label="Önceki görsel" class="lightbox-btn absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-10">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"/></svg>
+  </button>
+  <button id="hero-next" aria-label="Sonraki görsel" class="lightbox-btn absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-10">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+  </button>
+  <div id="hero-dots" class="absolute bottom-6 right-5 md:right-8 z-10 flex gap-2"></div>
+</section>
+
+<!-- ================= TOURS ================= -->
+<section id="turlar" class="bg-app py-24 px-5 md:px-8">
+  <div class="max-w-7xl mx-auto">
+    <div class="reveal max-w-2xl mb-14">
+      <p class="eyebrow mb-3 text-coral">Ne İle, Nereye?</p>
+      <h2 class="font-display font-bold text-3xl md:text-5xl mb-4">Turlarımız</h2>
+      <p class="text-muted leading-relaxed">Sekiz farklı deneyim, aynı vadiler. İster motorun tozunu yutun, ister klasik bir aracın koltuğunda keyfini çıkarın — buluşma noktası her turda Göreme merkezdir.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+      <!-- Row 1 (ATV only) — Tour 1: ATV Sunrise -->
+      <article class="reveal tour-card">
+        <div class="relative aspect-[16/10] overflow-hidden rounded-t-3xl">
+          <img src="assets/img/tour-atv-sunrise.jpg" alt="ATV Gün Doğumu Turu" class="w-full h-full object-contain bg-surface-2" loading="lazy" />
+          <span class="absolute top-4 left-4 tag-pill">ATV</span>
+        </div>
+        <div class="p-7 md:p-8 flex flex-col flex-1">
+          <h3 class="font-display font-bold text-xl md:text-2xl mb-2 min-h-[3.5rem] md:min-h-[4rem]">ATV Gün Doğumu Turu</h3>
+          <p class="text-muted text-sm leading-relaxed mb-5 min-h-[5.5rem]">Güneş peri bacalarının ardından yükselirken Aşk Vadisi'nde toz kaldırın, balonlarla aynı anda gökyüzünü izleyin.</p>
+          <div class="font-tabular text-xs grid grid-cols-3 gap-3 mb-5 text-muted min-h-[2.5rem]">
+            <div><p class="opacity-60 mb-1">SÜRE</p><p class="text-strong font-semibold">2 Saat</p></div>
+            <div><p class="opacity-60 mb-1">KALKIŞ</p><p class="text-strong font-semibold">~05:45</p></div>
+            <div><p class="opacity-60 mb-1">GRUP</p><p class="text-strong font-semibold">Maks. 8</p></div>
+          </div>
+          <div class="route-item mb-5"><button type="button" class="route-toggle w-full flex items-center gap-2 text-xs font-tabular uppercase tracking-wide text-muted border border-hair rounded-full px-3 py-2 hover:border-coral hover:text-coral transition-colors" aria-expanded="false"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0"><circle cx="6" cy="6" r="2"/><circle cx="18" cy="18" r="2"/><path d="M8 6h7a4 4 0 0 1 4 4v0a4 4 0 0 1-4 4H9a4 4 0 0 0-4 4v0"/></svg><span>Güzergah</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="route-chevron ml-auto shrink-0"><path d="M6 9l6 6 6-6"/></svg></button><div class="route-panel"><p class="text-muted text-sm pt-2 px-1">Aşk Vadisi → Beyaz Vadi → Kılıçlar Vadisi → Kızıl Vadi</p></div></div>
+          <div class="grid grid-cols-2 gap-2 mb-6">
+            <span class="chip">Ekipman Dahil</span>
+            <span class="chip">Rehber Eşliğinde</span>
+            <span class="chip">Otel Transferi</span>
+            <span class="chip">Fotoğraf Molası</span>
+          </div>
+          <div class="mt-auto">
+            <div class="flex items-baseline gap-2 mb-3">
+              <span class="font-tabular text-sm text-muted line-through">2.500 ₺</span>
+              <span class="font-display font-bold text-xl text-coral">2.000 ₺</span>
+              <span class="text-[11px] text-muted">/ kişi</span>
+            </div>
+            <a data-wa-text="Merhaba! ATV Gün Doğumu Turu hakkında bilgi almak istiyorum." href="#" class="wa-link block text-center bg-sunset text-white font-display font-bold uppercase tracking-wide text-sm px-5 py-3.5 rounded-full shadow-glow hover:brightness-105 transition">Detay & Rezervasyon</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Tour 2: ATV Sunset -->
+      <article class="reveal tour-card">
+        <div class="relative aspect-[16/10] overflow-hidden rounded-t-3xl">
+          <img src="assets/img/tour-atv-sunset.jpg" alt="ATV Gün Batımı Turu" class="w-full h-full object-contain bg-surface-2" loading="lazy" />
+          <span class="absolute top-4 left-4 tag-pill">ATV</span>
+        </div>
+        <div class="p-7 md:p-8 flex flex-col flex-1">
+          <h3 class="font-display font-bold text-xl md:text-2xl mb-2 min-h-[3.5rem] md:min-h-[4rem]">ATV Gün Batımı Turu</h3>
+          <p class="text-muted text-sm leading-relaxed mb-5 min-h-[5.5rem]">Kızılçukur'un ünlü seyir tepesine ATV ile çıkın, gökyüzü kızıla dönerken vadinin en iyi manzarasını yakalayın.</p>
+          <div class="font-tabular text-xs grid grid-cols-3 gap-3 mb-5 text-muted min-h-[2.5rem]">
+            <div><p class="opacity-60 mb-1">SÜRE</p><p class="text-strong font-semibold">2 Saat</p></div>
+            <div><p class="opacity-60 mb-1">KALKIŞ</p><p class="text-strong font-semibold">Gün B. göre</p></div>
+            <div><p class="opacity-60 mb-1">GRUP</p><p class="text-strong font-semibold">Maks. 8</p></div>
+          </div>
+          <div class="route-item mb-5"><button type="button" class="route-toggle w-full flex items-center gap-2 text-xs font-tabular uppercase tracking-wide text-muted border border-hair rounded-full px-3 py-2 hover:border-coral hover:text-coral transition-colors" aria-expanded="false"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0"><circle cx="6" cy="6" r="2"/><circle cx="18" cy="18" r="2"/><path d="M8 6h7a4 4 0 0 1 4 4v0a4 4 0 0 1-4 4H9a4 4 0 0 0-4 4v0"/></svg><span>Güzergah</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="route-chevron ml-auto shrink-0"><path d="M6 9l6 6 6-6"/></svg></button><div class="route-panel"><p class="text-muted text-sm pt-2 px-1">Aşk Vadisi → Beyaz Vadi → Kılıçlar Vadisi → Kızıl Vadi</p></div></div>
+          <div class="grid grid-cols-2 gap-2 mb-6">
+            <span class="chip">Ekipman Dahil</span>
+            <span class="chip">Rehber Eşliğinde</span>
+            <span class="chip">Otel Transferi</span>
+            <span class="chip">Fotoğraf Molası</span>
+          </div>
+          <div class="mt-auto">
+            <div class="flex items-baseline gap-2 mb-3">
+              <span class="font-tabular text-sm text-muted line-through">2.000 ₺</span>
+              <span class="font-display font-bold text-xl text-coral">1.500 ₺</span>
+              <span class="text-[11px] text-muted">/ kişi</span>
+            </div>
+            <a data-wa-text="Merhaba! ATV Gün Batımı Turu hakkında bilgi almak istiyorum." href="#" class="wa-link block text-center bg-sunset text-white font-display font-bold uppercase tracking-wide text-sm px-5 py-3.5 rounded-full shadow-glow hover:brightness-105 transition">Detay & Rezervasyon</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Tour 3: ATV Daytime -->
+      <article class="reveal tour-card">
+        <div class="relative aspect-[16/10] overflow-hidden rounded-t-3xl">
+          <img src="assets/img/tour-atv-viewpoint.jpg" alt="ATV Gün İçi Turu" class="w-full h-full object-contain bg-surface-2" loading="lazy" />
+          <span class="absolute top-4 left-4 tag-pill">ATV</span>
+        </div>
+        <div class="p-7 md:p-8 flex flex-col flex-1">
+          <h3 class="font-display font-bold text-xl md:text-2xl mb-2 min-h-[3.5rem] md:min-h-[4rem]">ATV Gün İçi Turu</h3>
+          <p class="text-muted text-sm leading-relaxed mb-5 min-h-[5.5rem]">Günün ortasında kısa ve enerjik bir mola — vadinin patikalarında hızlı bir ATV turu ile serinleyin.</p>
+          <div class="font-tabular text-xs grid grid-cols-3 gap-3 mb-5 text-muted min-h-[2.5rem]">
+            <div><p class="opacity-60 mb-1">SÜRE</p><p class="text-strong font-semibold">1 Saat</p></div>
+            <div><p class="opacity-60 mb-1">KALKIŞ</p><p class="text-strong font-semibold">Serbest</p></div>
+            <div><p class="opacity-60 mb-1">GRUP</p><p class="text-strong font-semibold">Maks. 8</p></div>
+          </div>
+          <div class="route-item mb-5"><button type="button" class="route-toggle w-full flex items-center gap-2 text-xs font-tabular uppercase tracking-wide text-muted border border-hair rounded-full px-3 py-2 hover:border-coral hover:text-coral transition-colors" aria-expanded="false"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0"><circle cx="6" cy="6" r="2"/><circle cx="18" cy="18" r="2"/><path d="M8 6h7a4 4 0 0 1 4 4v0a4 4 0 0 1-4 4H9a4 4 0 0 0-4 4v0"/></svg><span>Güzergah</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="route-chevron ml-auto shrink-0"><path d="M6 9l6 6 6-6"/></svg></button><div class="route-panel"><p class="text-muted text-sm pt-2 px-1">Aşk Vadisi → Kılıçlar Vadisi → Kızıl Vadi</p></div></div>
+          <div class="grid grid-cols-2 gap-2 mb-6">
+            <span class="chip">Ekipman Dahil</span>
+            <span class="chip">Rehber Eşliğinde</span>
+            <span class="chip">Otel Transferi</span>
+            <span class="chip">Fotoğraf Molası</span>
+          </div>
+          <div class="mt-auto">
+            <div class="flex items-baseline gap-2 mb-3">
+              <span class="font-tabular text-sm text-muted line-through">1.500 ₺</span>
+              <span class="font-display font-bold text-xl text-coral">1.000 ₺</span>
+              <span class="text-[11px] text-muted">/ kişi</span>
+            </div>
+            <a data-wa-text="Merhaba! ATV Gün İçi Turu hakkında bilgi almak istiyorum." href="#" class="wa-link block text-center bg-sunset text-white font-display font-bold uppercase tracking-wide text-sm px-5 py-3.5 rounded-full shadow-glow hover:brightness-105 transition">Detay & Rezervasyon</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Tour 4: ATV Daytime Extended -->
+      <article class="reveal tour-card">
+        <div class="relative aspect-[16/10] overflow-hidden rounded-t-3xl">
+          <img src="assets/img/tour-atv-family.jpg" alt="ATV Gün İçi Turu" class="w-full h-full object-contain bg-surface-2" loading="lazy" />
+          <span class="absolute top-4 left-4 tag-pill">ATV</span>
+        </div>
+        <div class="p-7 md:p-8 flex flex-col flex-1">
+          <h3 class="font-display font-bold text-xl md:text-2xl mb-2 min-h-[3.5rem] md:min-h-[4rem]">ATV Gün İçi Turu</h3>
+          <p class="text-muted text-sm leading-relaxed mb-5 min-h-[5.5rem]">Vadinin daha uzun rotalarını keşfedin — günün ortasında iki saatlik dolu dolu bir ATV macerası.</p>
+          <div class="font-tabular text-xs grid grid-cols-3 gap-3 mb-5 text-muted min-h-[2.5rem]">
+            <div><p class="opacity-60 mb-1">SÜRE</p><p class="text-strong font-semibold">2 Saat</p></div>
+            <div><p class="opacity-60 mb-1">KALKIŞ</p><p class="text-strong font-semibold">Serbest</p></div>
+            <div><p class="opacity-60 mb-1">GRUP</p><p class="text-strong font-semibold">Maks. 8</p></div>
+          </div>
+          <div class="route-item mb-5"><button type="button" class="route-toggle w-full flex items-center gap-2 text-xs font-tabular uppercase tracking-wide text-muted border border-hair rounded-full px-3 py-2 hover:border-coral hover:text-coral transition-colors" aria-expanded="false"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0"><circle cx="6" cy="6" r="2"/><circle cx="18" cy="18" r="2"/><path d="M8 6h7a4 4 0 0 1 4 4v0a4 4 0 0 1-4 4H9a4 4 0 0 0-4 4v0"/></svg><span>Güzergah</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="route-chevron ml-auto shrink-0"><path d="M6 9l6 6 6-6"/></svg></button><div class="route-panel"><p class="text-muted text-sm pt-2 px-1">Aşk Vadisi → Beyaz Vadi → Kılıçlar Vadisi → Kızıl Vadi</p></div></div>
+          <div class="grid grid-cols-2 gap-2 mb-6">
+            <span class="chip">Ekipman Dahil</span>
+            <span class="chip">Rehber Eşliğinde</span>
+            <span class="chip">Otel Transferi</span>
+            <span class="chip">Fotoğraf Molası</span>
+          </div>
+          <div class="mt-auto">
+            <div class="flex items-baseline gap-2 mb-3">
+              <span class="font-tabular text-sm text-muted line-through">2.000 ₺</span>
+              <span class="font-display font-bold text-xl text-coral">1.500 ₺</span>
+              <span class="text-[11px] text-muted">/ kişi</span>
+            </div>
+            <a data-wa-text="Merhaba! ATV Gün İçi Turu hakkında bilgi almak istiyorum." href="#" class="wa-link block text-center bg-sunset text-white font-display font-bold uppercase tracking-wide text-sm px-5 py-3.5 rounded-full shadow-glow hover:brightness-105 transition">Detay & Rezervasyon</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Row 2 (Klasik Otomobil + Kombine) — Tour 5: Classic Car Sunrise -->
+      <article class="reveal tour-card">
+        <div class="relative aspect-[16/10] overflow-hidden rounded-t-3xl">
+          <img src="assets/img/tour-classic-car.jpg" alt="Klasik Otomobil ile Gün Doğumu Turu" class="w-full h-full object-contain bg-surface-2" loading="lazy" />
+          <span class="absolute top-4 left-4 tag-pill">Klasik Otomobil</span>
+        </div>
+        <div class="p-7 md:p-8 flex flex-col flex-1">
+          <h3 class="font-display font-bold text-xl md:text-2xl mb-2 min-h-[3.5rem] md:min-h-[4rem]">Klasik Otomobil ile Gün Doğumu Turu</h3>
+          <p class="text-muted text-sm leading-relaxed mb-5 min-h-[5.5rem]">Gün doğarken klasik bir otomobille Aşk Vadisi ve Uçhisar arasından geçin, sabahın ilk ışıklarını rahat koltuklarda karşılayın.</p>
+          <div class="font-tabular text-xs grid grid-cols-3 gap-3 mb-5 text-muted min-h-[2.5rem]">
+            <div><p class="opacity-60 mb-1">SÜRE</p><p class="text-strong font-semibold">2 Saat</p></div>
+            <div><p class="opacity-60 mb-1">KALKIŞ</p><p class="text-strong font-semibold">~05:30</p></div>
+            <div><p class="opacity-60 mb-1">KOLTUK</p><p class="text-strong font-semibold">3-4 Kişi</p></div>
+          </div>
+          <div class="route-item mb-5"><button type="button" class="route-toggle w-full flex items-center gap-2 text-xs font-tabular uppercase tracking-wide text-muted border border-hair rounded-full px-3 py-2 hover:border-coral hover:text-coral transition-colors" aria-expanded="false"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0"><circle cx="6" cy="6" r="2"/><circle cx="18" cy="18" r="2"/><path d="M8 6h7a4 4 0 0 1 4 4v0a4 4 0 0 1-4 4H9a4 4 0 0 0-4 4v0"/></svg><span>Güzergah</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="route-chevron ml-auto shrink-0"><path d="M6 9l6 6 6-6"/></svg></button><div class="route-panel"><p class="text-muted text-sm pt-2 px-1">Göreme → Aşk Vadisi → Uçhisar</p></div></div>
+          <div class="grid grid-cols-2 gap-2 mb-6">
+            <span class="chip">Ekipman Dahil</span>
+            <span class="chip">Rehber Eşliğinde</span>
+            <span class="chip">Otel Transferi</span>
+            <span class="chip">Fotoğraf Molası</span>
+          </div>
+          <div class="mt-auto">
+            <div class="flex items-baseline gap-2 mb-3">
+              <span class="font-tabular text-sm text-muted line-through">3.500 ₺</span>
+              <span class="font-display font-bold text-xl text-coral">3.000 ₺</span>
+              <span class="text-[11px] text-muted">/ kişi</span>
+            </div>
+            <a data-wa-text="Merhaba! Klasik Otomobil ile Gün Doğumu Turu hakkında bilgi almak istiyorum." href="#" class="wa-link block text-center bg-sunset text-white font-display font-bold uppercase tracking-wide text-sm px-5 py-3.5 rounded-full shadow-glow hover:brightness-105 transition">Detay & Rezervasyon</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Tour 6: Classic Car Sunset -->
+      <article class="reveal tour-card">
+        <div class="relative aspect-[16/10] overflow-hidden rounded-t-3xl">
+          <img src="assets/img/tour-balloon-classic.jpg" alt="Klasik Otomobil ile Gün Batımı Turu" class="w-full h-full object-contain bg-surface-2" loading="lazy" />
+          <span class="absolute top-4 left-4 tag-pill">Klasik Otomobil</span>
+        </div>
+        <div class="p-7 md:p-8 flex flex-col flex-1">
+          <h3 class="font-display font-bold text-xl md:text-2xl mb-2 min-h-[3.5rem] md:min-h-[4rem]">Klasik Otomobil ile Gün Batımı Turu</h3>
+          <p class="text-muted text-sm leading-relaxed mb-5 min-h-[5.5rem]">Klasik bir otomobille vadinin seyir tepesine çıkın, gökyüzü altın rengine dönerken rahat koltuklarda gün batımının keyfini çıkarın.</p>
+          <div class="font-tabular text-xs grid grid-cols-3 gap-3 mb-5 text-muted min-h-[2.5rem]">
+            <div><p class="opacity-60 mb-1">SÜRE</p><p class="text-strong font-semibold">2 Saat</p></div>
+            <div><p class="opacity-60 mb-1">KALKIŞ</p><p class="text-strong font-semibold">Gün B. göre</p></div>
+            <div><p class="opacity-60 mb-1">KOLTUK</p><p class="text-strong font-semibold">3-4 Kişi</p></div>
+          </div>
+          <div class="route-item mb-5"><button type="button" class="route-toggle w-full flex items-center gap-2 text-xs font-tabular uppercase tracking-wide text-muted border border-hair rounded-full px-3 py-2 hover:border-coral hover:text-coral transition-colors" aria-expanded="false"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0"><circle cx="6" cy="6" r="2"/><circle cx="18" cy="18" r="2"/><path d="M8 6h7a4 4 0 0 1 4 4v0a4 4 0 0 1-4 4H9a4 4 0 0 0-4 4v0"/></svg><span>Güzergah</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="route-chevron ml-auto shrink-0"><path d="M6 9l6 6 6-6"/></svg></button><div class="route-panel"><p class="text-muted text-sm pt-2 px-1">Göreme → Kızılçukur Seyir Tepesi</p></div></div>
+          <div class="grid grid-cols-2 gap-2 mb-6">
+            <span class="chip">Ekipman Dahil</span>
+            <span class="chip">Rehber Eşliğinde</span>
+            <span class="chip">Otel Transferi</span>
+            <span class="chip">Fotoğraf Molası</span>
+          </div>
+          <div class="mt-auto">
+            <div class="flex items-baseline gap-2 mb-3">
+              <span class="font-tabular text-sm text-muted line-through">3.000 ₺</span>
+              <span class="font-display font-bold text-xl text-coral">2.500 ₺</span>
+              <span class="text-[11px] text-muted">/ kişi</span>
+            </div>
+            <a data-wa-text="Merhaba! Klasik Otomobil ile Gün Batımı Turu hakkında bilgi almak istiyorum." href="#" class="wa-link block text-center bg-sunset text-white font-display font-bold uppercase tracking-wide text-sm px-5 py-3.5 rounded-full shadow-glow hover:brightness-105 transition">Detay & Rezervasyon</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Tour 7: Classic Car Daytime -->
+      <article class="reveal tour-card">
+        <div class="relative aspect-[16/10] overflow-hidden rounded-t-3xl">
+          <img src="assets/img/tour-classic-photo.jpg" alt="Klasik Otomobil ile Gün İçi Turu" class="w-full h-full object-contain bg-surface-2" loading="lazy" />
+          <span class="absolute top-4 left-4 tag-pill">Klasik Otomobil</span>
+        </div>
+        <div class="p-7 md:p-8 flex flex-col flex-1">
+          <h3 class="font-display font-bold text-xl md:text-2xl mb-2 min-h-[3.5rem] md:min-h-[4rem]">Klasik Otomobil ile Gün İçi Turu</h3>
+          <p class="text-muted text-sm leading-relaxed mb-5 min-h-[5.5rem]">Günün ortasında kısa bir mola — Kapadokya'nın en fotojenik noktalarında duraklayan sakin bir klasik otomobil gezintisi.</p>
+          <div class="font-tabular text-xs grid grid-cols-3 gap-3 mb-5 text-muted min-h-[2.5rem]">
+            <div><p class="opacity-60 mb-1">SÜRE</p><p class="text-strong font-semibold">1 Saat</p></div>
+            <div><p class="opacity-60 mb-1">KALKIŞ</p><p class="text-strong font-semibold">Serbest</p></div>
+            <div><p class="opacity-60 mb-1">KOLTUK</p><p class="text-strong font-semibold">3-4 Kişi</p></div>
+          </div>
+          <div class="route-item mb-5"><button type="button" class="route-toggle w-full flex items-center gap-2 text-xs font-tabular uppercase tracking-wide text-muted border border-hair rounded-full px-3 py-2 hover:border-coral hover:text-coral transition-colors" aria-expanded="false"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0"><circle cx="6" cy="6" r="2"/><circle cx="18" cy="18" r="2"/><path d="M8 6h7a4 4 0 0 1 4 4v0a4 4 0 0 1-4 4H9a4 4 0 0 0-4 4v0"/></svg><span>Güzergah</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="route-chevron ml-auto shrink-0"><path d="M6 9l6 6 6-6"/></svg></button><div class="route-panel"><p class="text-muted text-sm pt-2 px-1">Uçhisar → Göreme → Ortahisar</p></div></div>
+          <div class="grid grid-cols-2 gap-2 mb-6">
+            <span class="chip">Ekipman Dahil</span>
+            <span class="chip">Rehber Eşliğinde</span>
+            <span class="chip">Otel Transferi</span>
+            <span class="chip">Fotoğraf Molası</span>
+          </div>
+          <div class="mt-auto">
+            <div class="flex items-baseline gap-2 mb-3">
+              <span class="font-display font-bold text-xl text-coral">1.500 ₺</span>
+              <span class="text-[11px] text-muted">/ kişi</span>
+            </div>
+            <a data-wa-text="Merhaba! Klasik Otomobil ile Gün İçi Turu hakkında bilgi almak istiyorum." href="#" class="wa-link block text-center bg-sunset text-white font-display font-bold uppercase tracking-wide text-sm px-5 py-3.5 rounded-full shadow-glow hover:brightness-105 transition">Detay & Rezervasyon</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Tour 8: Combo -->
+      <article class="reveal tour-card">
+        <div class="relative aspect-[16/10] overflow-hidden rounded-t-3xl">
+          <img src="assets/img/tour-combo.jpg" alt="ATV + Klasik Kombine Tur" class="w-full h-full object-contain bg-surface-2" loading="lazy" />
+          <span class="absolute top-4 left-4 tag-pill">Kombine</span>
+        </div>
+        <div class="p-7 md:p-8 flex flex-col flex-1">
+          <h3 class="font-display font-bold text-xl md:text-2xl mb-2 min-h-[3.5rem] md:min-h-[4rem]">ATV + Klasik Kombine Tur</h3>
+          <p class="text-muted text-sm leading-relaxed mb-5 min-h-[5.5rem]">Bir saat ATV heyecanı, ardından bir saat klasik otomobille sakin bir vadi turu — Kapadokya'yı tek seferde iki farklı hızda yaşayın.</p>
+          <div class="font-tabular text-xs grid grid-cols-3 gap-3 mb-5 text-muted min-h-[2.5rem]">
+            <div><p class="opacity-60 mb-1">SÜRE</p><p class="text-strong font-semibold">2 Saat</p></div>
+            <div><p class="opacity-60 mb-1">KALKIŞ</p><p class="text-strong font-semibold">Serbest</p></div>
+            <div><p class="opacity-60 mb-1">GRUP</p><p class="text-strong font-semibold">Maks. 8</p></div>
+          </div>
+          <div class="route-item mb-5">
+            <button type="button" class="route-toggle w-full flex items-center gap-2 text-xs font-tabular uppercase tracking-wide text-muted border border-hair rounded-full px-3 py-2 hover:border-coral hover:text-coral transition-colors" aria-expanded="false">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0"><circle cx="6" cy="6" r="2"/><circle cx="18" cy="18" r="2"/><path d="M8 6h7a4 4 0 0 1 4 4v0a4 4 0 0 1-4 4H9a4 4 0 0 0-4 4v0"/></svg>
+              <span>Güzergah</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="route-chevron ml-auto shrink-0"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="route-panel">
+              <p class="text-muted text-sm pt-2 px-1">ATV: Aşk Vadisi → Kızıl Vadi · Klasik Otomobil: Göreme → Uçhisar</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-2 mb-6">
+            <span class="chip">Ekipman Dahil</span>
+            <span class="chip">Rehber Eşliğinde</span>
+            <span class="chip">Otel Transferi</span>
+            <span class="chip">Fotoğraf Molası</span>
+          </div>
+          <div class="mt-auto">
+            <div class="flex items-baseline gap-2 mb-3">
+              <span class="font-display font-bold text-xl text-coral">2.500 ₺</span>
+              <span class="text-[11px] text-muted">/ kişi</span>
+            </div>
+            <a data-wa-text="Merhaba! ATV + Klasik Kombine Tur hakkında bilgi almak istiyorum." href="#" class="wa-link block text-center bg-sunset text-white font-display font-bold uppercase tracking-wide text-sm px-5 py-3.5 rounded-full shadow-glow hover:brightness-105 transition">Detay & Rezervasyon</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= HOW IT WORKS ================= -->
+<section id="nasil" class="py-24 px-5 md:px-8 bg-surface-2">
+  <div class="max-w-7xl mx-auto">
+    <div class="reveal max-w-2xl mb-14">
+      <p class="eyebrow mb-3 text-violet">Rezervasyon</p>
+      <h2 class="font-display font-bold text-3xl md:text-5xl mb-4">Nasıl Çalışır</h2>
+      <p class="text-muted leading-relaxed">Üç adımda vadidesiniz. Ön ödeme yok, form yok — her şey WhatsApp üzerinden.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="reveal step-card">
+        <p class="font-display font-bold text-5xl mb-3 bg-sunset bg-clip-text text-transparent">01</p>
+        <h3 class="font-display font-bold text-lg mb-2">WhatsApp'tan Yazın</h3>
+        <p class="text-muted text-sm leading-relaxed">Aşağıdaki turlardan birini seçin ya da doğrudan yazın, size uygun tarihi birlikte belirleyelim.</p>
+      </div>
+      <div class="reveal step-card">
+        <p class="font-display font-bold text-5xl mb-3 bg-sunset bg-clip-text text-transparent">02</p>
+        <h3 class="font-display font-bold text-lg mb-2">Tarih & Saat Onaylanır</h3>
+        <p class="text-muted text-sm leading-relaxed">Gün doğumu/batımı saatine göre kalkış saatini teyit eder, buluşma noktasını paylaşırız.</p>
+      </div>
+      <div class="reveal step-card">
+        <p class="font-display font-bold text-5xl mb-3 bg-sunset bg-clip-text text-transparent">03</p>
+        <h3 class="font-display font-bold text-lg mb-2">Vadide Buluşalım</h3>
+        <p class="text-muted text-sm leading-relaxed">Göreme merkezdeki buluşma noktasında hazır olun, gerisini bize bırakın.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GALLERY / SLIDER ================= -->
+<section id="galeri" class="py-24 bg-app overflow-hidden">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="reveal max-w-2xl mb-10 flex flex-wrap items-end justify-between gap-6">
+      <div>
+        <p class="eyebrow mb-3 text-coral">Vadiden Kareler</p>
+        <h2 class="font-display font-bold text-3xl md:text-5xl">Galeri</h2>
+      </div>
+      <div class="hidden sm:flex gap-3">
+        <button id="slider-prev" aria-label="Önceki" class="slider-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"/></svg></button>
+        <button id="slider-next" aria-label="Sonraki" class="slider-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></button>
+      </div>
+    </div>
+  </div>
+
+  <div id="slider-track" class="reveal flex gap-5 overflow-x-auto px-5 md:px-8 pb-6 snap-x snap-mandatory no-scrollbar cursor-grab">
+    <button class="slide snap-center shrink-0 w-[78%] sm:w-[46%] lg:w-[29%] rounded-3xl overflow-hidden relative group" data-index="0">
+      <img src="assets/img/gallery-1.jpg" alt="Kızılçukur'da gün batımı" class="w-full aspect-[4/3] object-contain bg-surface-2 transition duration-500 group-hover:scale-105" draggable="false" loading="lazy" />
+      <span class="slide-caption">Kızılçukur'da Gün Batımı</span>
+    </button>
+    <button class="slide snap-center shrink-0 w-[78%] sm:w-[46%] lg:w-[29%] rounded-3xl overflow-hidden relative group" data-index="1">
+      <img src="assets/img/gallery-2.jpg" alt="Balonlarla aynı anda gün doğumu" class="w-full aspect-[4/3] object-contain bg-surface-2 transition duration-500 group-hover:scale-105" draggable="false" loading="lazy" />
+      <span class="slide-caption">Balonlarla Aynı Anda Gün Doğumu</span>
+    </button>
+    <button class="slide snap-center shrink-0 w-[78%] sm:w-[46%] lg:w-[29%] rounded-3xl overflow-hidden relative group" data-index="2">
+      <img src="assets/img/gallery-3.jpg" alt="Aşk Vadisi'nde ATV konvoyu" class="w-full aspect-[4/3] object-contain bg-surface-2 transition duration-500 group-hover:scale-105" draggable="false" loading="lazy" />
+      <span class="slide-caption">Aşk Vadisi'nde ATV Konvoyu</span>
+    </button>
+    <button class="slide snap-center shrink-0 w-[78%] sm:w-[46%] lg:w-[29%] rounded-3xl overflow-hidden relative group" data-index="3">
+      <img src="assets/img/gallery-4.jpg" alt="Peri bacaları önünde klasik otomobil" class="w-full aspect-[4/3] object-contain bg-surface-2 transition duration-500 group-hover:scale-105" draggable="false" loading="lazy" />
+      <span class="slide-caption">Peri Bacaları Önünde Klasik Otomobil</span>
+    </button>
+    <button class="slide snap-center shrink-0 w-[78%] sm:w-[46%] lg:w-[29%] rounded-3xl overflow-hidden relative group" data-index="4">
+      <img src="assets/img/gallery-5.jpg" alt="Aşk Vadisi panoraması" class="w-full aspect-[4/3] object-contain bg-surface-2 transition duration-500 group-hover:scale-105" draggable="false" loading="lazy" />
+      <span class="slide-caption">Aşk Vadisi Panoraması</span>
+    </button>
+    <button class="slide snap-center shrink-0 w-[78%] sm:w-[46%] lg:w-[29%] rounded-3xl overflow-hidden relative group" data-index="5">
+      <img src="assets/img/gallery-6.jpg" alt="Tozlu patikada ATV" class="w-full aspect-[4/3] object-contain bg-surface-2 transition duration-500 group-hover:scale-105" draggable="false" loading="lazy" />
+      <span class="slide-caption">Tozlu Patikada ATV</span>
+    </button>
+    <button class="slide snap-center shrink-0 w-[78%] sm:w-[46%] lg:w-[29%] rounded-3xl overflow-hidden relative group" data-index="6">
+      <img src="assets/img/gallery-7.jpg" alt="Uçhisar Kalesi yolunda" class="w-full aspect-[4/3] object-contain bg-surface-2 transition duration-500 group-hover:scale-105" draggable="false" loading="lazy" />
+      <span class="slide-caption">Uçhisar Kalesi Yolunda</span>
+    </button>
+    <button class="slide snap-center shrink-0 w-[78%] sm:w-[46%] lg:w-[29%] rounded-3xl overflow-hidden relative group" data-index="7">
+      <img src="assets/img/gallery-8.jpg" alt="Gün batımında vadi silüeti" class="w-full aspect-[4/3] object-contain bg-surface-2 transition duration-500 group-hover:scale-105" draggable="false" loading="lazy" />
+      <span class="slide-caption">Gün Batımında Vadi Silüeti</span>
+    </button>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div id="slider-dots" class="flex justify-center gap-2 mt-4"></div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox" class="fixed inset-0 z-50 items-center justify-center p-5">
+  <button id="lightbox-close" aria-label="Kapat" class="lightbox-btn absolute top-5 right-5 md:top-8 md:right-8">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <button id="lightbox-prev" aria-label="Önceki" class="lightbox-btn absolute left-3 md:left-8 top-1/2 -translate-y-1/2">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"/></svg>
+  </button>
+  <button id="lightbox-next" aria-label="Sonraki" class="lightbox-btn absolute right-3 md:right-8 top-1/2 -translate-y-1/2">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+  </button>
+  <div class="max-w-3xl w-full">
+    <img id="lightbox-image" src="" alt="" class="w-full aspect-[4/3] object-contain bg-ink rounded-3xl" />
+    <p id="lightbox-caption" class="text-center mt-5 eyebrow text-white/80"></p>
+  </div>
+</div>
+
+<!-- ================= FAQ ================= -->
+<section id="sss" class="py-24 px-5 md:px-8 bg-surface-2">
+  <div class="max-w-4xl mx-auto">
+    <div class="reveal mb-14">
+      <p class="eyebrow mb-3 text-violet">Merak Edilenler</p>
+      <h2 class="font-display font-bold text-3xl md:text-5xl">Sıkça Sorulan Sorular</h2>
+    </div>
+
+    <div id="faq-list" class="reveal flex flex-col gap-3"></div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="iletisim" class="py-24 px-5 md:px-8 bg-app">
+  <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-14">
+    <div class="reveal">
+      <p class="eyebrow mb-3 text-coral">Bize Ulaşın</p>
+      <h2 class="font-display font-bold text-3xl md:text-5xl mb-6">İletişim</h2>
+      <p class="text-muted leading-relaxed mb-10 max-w-md">Sorularınız mı var? En hızlı yanıt için WhatsApp'tan yazın — genelde birkaç dakika içinde döneriz.</p>
+
+      <div class="grid sm:grid-cols-2 gap-5">
+        <a data-wa-text="Merhaba! Golden Grape Travel hakkında bilgi almak istiyorum." href="#" class="wa-link contact-card">
+          <svg width="24" height="24" viewBox="0 0 32 32" fill="#25D366" aria-hidden="true" class="shrink-0"><path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.386.699 4.607 1.902 6.472L4 29l7.72-1.86A11.94 11.94 0 0 0 16.001 27C22.628 27 28 21.627 28 15S22.628 3 16.001 3z"/></svg>
+          <div>
+            <p class="font-display font-bold text-sm mb-1">WhatsApp</p>
+            <p class="text-muted text-sm font-tabular">+90 506 953 40 98</p>
+          </div>
+        </a>
+
+        <a href="tel:+905069534098" class="contact-card">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="shrink-0 text-violet"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <div>
+            <p class="font-display font-bold text-sm mb-1">Telefon</p>
+            <p class="text-muted text-sm font-tabular">+90 506 953 40 98</p>
+          </div>
+        </a>
+
+        <a href="mailto:info@goldengrapetravel.com" class="contact-card">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="shrink-0 text-violet"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="M2 7l10 6 10-6"/></svg>
+          <div>
+            <p class="font-display font-bold text-sm mb-1">E-posta</p>
+            <p class="text-muted text-sm break-all">info@goldengrapetravel.com</p>
+          </div>
+        </a>
+
+        <div class="contact-card">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="shrink-0 text-violet"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+          <div>
+            <p class="font-display font-bold text-sm mb-1">Buluşma Noktası</p>
+            <p class="text-muted text-sm">Göreme Otogar Meydanı, Nevşehir</p>
+          </div>
+        </div>
+
+        <div class="contact-card sm:col-span-2">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="shrink-0 text-violet"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <div>
+            <p class="font-display font-bold text-sm mb-1">Çalışma Saatleri</p>
+            <p class="text-muted text-sm">Her gün 05:00 – 21:00 (gün doğumu/batımı saatine göre değişir)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="rounded-3xl overflow-hidden border border-hair shadow-soft h-full min-h-[380px]">
+        <iframe
+          title="Göreme, Kapadokya konum haritası"
+          src="https://www.google.com/maps?q=G%C3%B6reme%2C%20Nev%C5%9Fehir%2C%20Kapadokya&output=embed"
+          class="w-full h-full min-h-[380px]"
+          style="border:0;"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-surface-2 border-t border-hair py-14 px-5 md:px-8">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+    <div>
+      <p class="font-display font-bold text-xl mb-2">Golden Grape Travel</p>
+      <p class="text-muted text-sm max-w-sm">Göreme, Kapadokya'da ATV ve klasik otomobil turları. Gün doğumundan gün batımına, iki farklı hızda vadi deneyimi.</p>
+    </div>
+    <div class="flex flex-wrap gap-x-6 gap-y-3 eyebrow">
+      <a href="#turlar" class="hover:text-coral transition-colors">Turlar</a>
+      <a href="#galeri" class="hover:text-coral transition-colors">Galeri</a>
+      <a href="#sss" class="hover:text-coral transition-colors">SSS</a>
+      <a href="#iletisim" class="hover:text-coral transition-colors">İletişim</a>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto border-t border-hair mt-10 pt-6 flex flex-wrap items-center justify-between gap-4">
+    <p class="text-xs text-muted font-tabular">© 2026 Golden Grape Travel · Göreme, Nevşehir</p>
+    <a href="https://www.instagram.com/goldengrapeturkey?igsh=Mm8zcXYxcDBkcjN6" target="_blank" rel="noopener noreferrer" aria-label="Instagram'da takip edin" class="w-9 h-9 grid place-items-center rounded-full border border-hair text-muted hover:border-coral hover:text-coral transition-colors">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+      </svg>
+    </a>
+  </div>
+</footer>
+
+<!-- ================= WHATSAPP FLOAT ================= -->
+<a id="wa-float" data-wa-text="Merhaba! Golden Grape Travel hakkında bilgi almak istiyorum." href="#" class="wa-link fixed bottom-6 right-6 z-40 w-16 h-16 rounded-full grid place-items-center shadow-2xl bg-[#25D366]" aria-label="WhatsApp üzerinden yazın">
+  <svg width="30" height="30" viewBox="0 0 32 32" fill="#fff" aria-hidden="true"><path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.386.699 4.607 1.902 6.472L4 29l7.72-1.86A11.94 11.94 0 0 0 16.001 27C22.628 27 28 21.627 28 15S22.628 3 16.001 3zm0 21.6c-1.98 0-3.83-.55-5.41-1.5l-.386-.23-4.58 1.103 1.127-4.463-.252-.398A9.57 9.57 0 0 1 5.4 15c0-5.85 4.75-10.6 10.6-10.6S26.6 9.15 26.6 15 21.85 24.6 16 24.6z"/><path d="M21.62 17.68c-.31-.155-1.83-.903-2.114-1.006-.284-.104-.49-.155-.697.155-.207.31-.8 1.006-.982 1.213-.18.207-.362.233-.671.078-.31-.155-1.31-.483-2.495-1.54-.922-.822-1.545-1.837-1.727-2.147-.18-.31-.02-.478.136-.632.14-.14.31-.362.465-.543.155-.181.207-.31.31-.517.104-.207.052-.388-.026-.543-.078-.155-.697-1.68-.955-2.3-.252-.605-.508-.523-.697-.533-.18-.009-.388-.011-.595-.011s-.543.078-.828.388c-.284.31-1.086 1.061-1.086 2.587s1.112 3.001 1.267 3.208c.155.207 2.19 3.343 5.306 4.687.742.32 1.32.512 1.771.655.744.237 1.42.204 1.955.124.596-.089 1.83-.748 2.088-1.47.258-.723.258-1.343.181-1.47-.078-.129-.284-.207-.594-.362z"/></svg>
+</a>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
