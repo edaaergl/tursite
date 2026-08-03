@@ -59,13 +59,16 @@
 html, body { background: var(--bg); color: var(--text); }
 body { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
 
+/* Sticky nav overlaps section tops on anchor-jump; offset so headings clear it */
+section[id] { scroll-margin-top: 90px; }
+
 a:focus-visible, button:focus-visible { outline: 2px solid #0D9488; outline-offset: 2px; }
 
 ::selection { background: #0D9488; color: #fff; }
 
 h1, h2, h3, .font-display { font-family: 'Bahnschrift', 'Arial Narrow', sans-serif; text-transform: uppercase; letter-spacing: 0.02em; }
 .font-tabular { font-variant-numeric: tabular-nums; font-family: Consolas, ui-monospace, monospace; font-weight: 700 !important; }
-.eyebrow { font-family: Consolas, ui-monospace, monospace; letter-spacing: 0.15em; text-transform: uppercase; font-size: 0.78rem; font-weight: 700 !important; }
+.eyebrow { font-family: Consolas, ui-monospace, monospace; letter-spacing: 0.15em; text-transform: uppercase; font-size: 0.85rem; font-weight: 700 !important; }
 
 /* ---------- Theme-aware surface utilities ---------- */
 .bg-app { background-color: var(--bg); }
@@ -106,9 +109,9 @@ h1, h2, h3, .font-display { font-family: 'Bahnschrift', 'Arial Narrow', sans-ser
 .tour-card { background: var(--surface); border: 1px solid var(--border); border-radius: 1.75rem; box-shadow: var(--shadow-soft); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s ease, box-shadow 0.3s ease; }
 .tour-card:hover { transform: translateY(-6px); box-shadow: 0 26px 55px -22px rgba(13, 148, 136, 0.24); }
 
-.tag-pill { font-family: Consolas, ui-monospace, monospace; font-weight: 700 !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.72rem; padding: 0.35rem 0.75rem; border-radius: 999px; background: rgba(11,37,48,0.55); backdrop-filter: blur(6px); color: #fff; }
+.tag-pill { font-family: Consolas, ui-monospace, monospace; font-weight: 700 !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.8rem; padding: 0.35rem 0.75rem; border-radius: 999px; background: rgba(11,37,48,0.55); backdrop-filter: blur(6px); color: #fff; }
 
-.chip { display: flex; align-items: center; justify-content: center; text-align: center; font-family: Consolas, ui-monospace, monospace; font-weight: 700 !important; letter-spacing: 0.01em; font-size: 0.76rem; padding: 0.35rem 0.7rem; border-radius: 999px; border: 1px solid var(--border); color: var(--text); }
+.chip { display: flex; align-items: center; justify-content: center; text-align: center; font-family: Consolas, ui-monospace, monospace; font-weight: 700 !important; letter-spacing: 0.01em; font-size: 0.82rem; padding: 0.35rem 0.7rem; border-radius: 999px; border: 1px solid var(--border); color: var(--text); }
 
 .step-card { background: var(--surface); border: 1px solid var(--border); border-radius: 1.5rem; padding: 2rem; box-shadow: var(--shadow-soft); }
 
@@ -136,7 +139,7 @@ h1, h2, h3, .font-display { font-family: 'Bahnschrift', 'Arial Narrow', sans-ser
 .no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .slide { border: 1px solid var(--border); box-shadow: var(--shadow-soft); }
-.slide-caption { position: absolute; inset: auto 0 0 0; padding: 1.1rem 1.1rem 0.9rem; font-family: Consolas, ui-monospace, monospace; font-weight: 700 !important; font-size: 0.8rem; letter-spacing: 0.02em; color: #fff; background: linear-gradient(0deg, rgba(11,37,48,0.85), transparent); text-align: left; }
+.slide-caption { position: absolute; inset: auto 0 0 0; padding: 1.1rem 1.1rem 0.9rem; font-family: Consolas, ui-monospace, monospace; font-weight: 700 !important; font-size: 0.88rem; letter-spacing: 0.02em; color: #fff; background: linear-gradient(0deg, rgba(11,37,48,0.85), transparent); text-align: left; }
 .slider-arrow { width: 2.75rem; height: 2.75rem; border-radius: 999px; border: 1px solid var(--border); background: var(--surface); display: grid; place-items: center; color: var(--text); transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease; }
 .slider-arrow:hover { background: linear-gradient(120deg, #0D9488, #0E7490); color: #fff; transform: translateY(-2px); }
 .slider-dot { width: 0.5rem; height: 0.5rem; border-radius: 999px; background: var(--border); transition: width 0.25s ease, background 0.25s ease; }
