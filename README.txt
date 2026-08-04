@@ -89,7 +89,8 @@ GERÇEK İŞLETME FOTOĞRAFLARI — İKİNCİ PARTİ (Desktop\Yeni klasör'den, 
 Bu partide ATV turlarından ve klasik otomobil + balon buluşmalarından gerçek fotoğraflar
 eklendi, aşağıdaki stok/eski dosyaların yerine kondu:
 hero-1.jpg, hero-2.jpg, tour-atv-sunrise.jpg, tour-atv-sunset.jpg, tour-atv-viewpoint.jpg,
-tour-atv-family.jpg, gallery-3.jpg, gallery-5.jpg, gallery-6.jpg, gallery-7.jpg, gallery-8.jpg
+tour-atv-daytime.jpg (gallery-6.jpg'den kart çerçevesine kırpıldı), gallery-3.jpg, gallery-5.jpg,
+gallery-6.jpg, gallery-7.jpg, gallery-8.jpg
 
 Kaynak fotoğraflar (orijinal, yüksek çözünürlüklü hallerini istediğinizde kullanmak için)
 Desktop\Yeni klasör klasörüne geri taşındı. O klasörde ayrıca kullanılmayan birkaç fotoğraf
