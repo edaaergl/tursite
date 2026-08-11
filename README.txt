@@ -19,11 +19,10 @@ DEĞİŞTİRMENİZ GEREKENLER
    Tüm WhatsApp butonları (üst menü, kartlar, iletişim, sağ alt köşedeki yuvarlak ikon)
    otomatik olarak bu numarayı kullanır.
 
-2) Telefon — AYARLANDI (+90 506 953 40 98) / E-posta — yer tutucu
+2) Telefon — AYARLANDI (+90 506 953 40 98) / E-posta — AYARLANDI
    index.html içinde "İletişim" bölümünde:
      tel:+905069534098
-     mailto:info@goldengrapetravel.com
-   E-posta hâlâ yer tutucu, gerçek adresinizi girmek isterseniz bu satırı güncelleyin.
+     mailto:Goldengrapeturkey@gmail.com
 
 2b) Instagram
    Sayfanın en altında (footer, telif satırının yanında) bir Instagram ikonu var,
