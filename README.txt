@@ -40,20 +40,32 @@ DEĞİŞTİRMENİZ GEREKENLER
    <p> metnini bulup güncelleyin.
 
 3) Fotoğraflar — SİTEDE İKİ AYRI SLIDER VAR
+   (03.09.2026'de dosya adları SEO-dostu isimlerle değiştirildi; eski adlar parantez içinde)
    a) Üst "Hero" slider (header'ın hemen altında, tam genişlik, otomatik geçişli):
-        hero-1.jpg -> Gün Doğumu slaydı (balonlar)
-        hero-2.jpg -> ATV Turu slaydı
-        hero-3.jpg -> Klasik Otomobil slaydı
-        hero-4.jpg -> Gün Batımı slaydı
+        kapadokya-balon-gun-dogumu.jpg (eski: hero-1.jpg) -> Gün Doğumu slaydı (balonlar)
+        kapadokya-vadide-atv-turu.jpg (eski: hero-2.jpg) -> ATV Turu slaydı
+        peribacalari-klasik-otomobil.jpg (eski: hero-3.jpg) -> Klasik Otomobil slaydı
+        kizilcukur-gun-batimi.jpg (eski: hero-4.jpg) -> Gün Batımı slaydı
       (Daha fazla slayt eklemek isterseniz index.html içinde <section id="top"> bloğunda
       bir ".hero-slide" div'ini kopyalayıp data-index numarasını artırmanız yeterli;
       slider bunu otomatik algılar.)
 
    b) "Galeri" slider (sayfanın altında, sürüklenebilir/oklu):
-        gallery-1.jpg ... gallery-8.jpg
+        galeri-kizilcukur-gun-batimi.jpg, galeri-balon-gun-dogumu.jpg,
+        galeri-ask-vadisi-atv-konvoyu.jpg, galeri-peribacalari-klasik-otomobil.jpg,
+        galeri-klasik-otomobil-balon-gun-dogumu.jpg, galeri-vadide-atv-turu.jpg,
+        galeri-klasik-otomobil-sicak-hava-balonu.jpg, galeri-klasik-otomobil-gun-dogumu-balonlari.jpg
+        (eski adlar: gallery-1.jpg ... gallery-8.jpg, aynı sırayla)
 
    c) Tur kartı görselleri:
-        tour-atv-sunrise.jpg, tour-atv-sunset.jpg, tour-classic-car.jpg, tour-combo.jpg
+        atv-gun-dogumu-turu.jpg (eski: tour-atv-sunrise.jpg)
+        atv-gun-batimi-turu.jpg (eski: tour-atv-sunset.jpg)
+        atv-gun-ici-turu-manzara.jpg (eski: tour-atv-viewpoint.jpg)
+        atv-gun-ici-turu.jpg (eski: tour-atv-daytime.jpg)
+        klasik-otomobil-gun-dogumu-turu.jpg (eski: tour-classic-car.jpg)
+        klasik-otomobil-gun-batimi-turu.jpg (eski: tour-balloon-classic.jpg)
+        klasik-otomobil-gun-ici-turu.jpg (eski: tour-classic-photo.jpg)
+        atv-klasik-kombine-tur.jpg (eski: tour-combo.jpg)
 
    Bu fotoğraflar şu an Pexels'ten alınmış, ticari kullanım dahil ücretsiz lisanslı
    (Pexels License) GERÇEK stok fotoğraflardır — genel Kapadokya/ATV/klasik otomobil
@@ -63,7 +75,7 @@ DEĞİŞTİRMENİZ GEREKENLER
    fotoğraflarından gelir.
 
    Değiştirmek için EN KOLAY yöntem: yeni fotoğrafı aynı dosya adıyla
-   (örn. "hero-1.jpg") assets/img/ klasörüne kopyalayıp üzerine yazmanız yeterli;
+   (örn. "kapadokya-balon-gun-dogumu.jpg") assets/img/ klasörüne kopyalayıp üzerine yazmanız yeterli;
    index.html'de hiçbir değişiklik gerekmez. Farklı bir dosya adı kullanırsanız
    index.html içindeki ilgili <img src="assets/img/..."> satırını da güncelleyin.
 
@@ -75,9 +87,12 @@ GERÇEK İŞLETME FOTOĞRAFLARI (Desktop\tur fotoğraf klasöründen, 31.07.2026
 ------------------------------------------------------------------------------------
 Aşağıdaki 7 dosya artık stok fotoğraf değil, işletmenizin kendi klasik otomobil
 turlarından gerçek fotoğraflardır (Desktop'taki "tur fotoğraf" klasöründen alındı,
-kart/hero çerçevesine göre kırpıldı):
-hero-3.jpg, tour-classic-car.jpg, tour-balloon-classic.jpg, tour-classic-photo.jpg,
-gallery-1.jpg, gallery-2.jpg, gallery-4.jpg
+kart/hero çerçevesine göre kırpıldı). Güncel dosya adları (03.09.2026'de değiştirildi):
+peribacalari-klasik-otomobil.jpg (eski: hero-3.jpg), klasik-otomobil-gun-dogumu-turu.jpg
+(eski: tour-classic-car.jpg), klasik-otomobil-gun-batimi-turu.jpg (eski: tour-balloon-classic.jpg),
+klasik-otomobil-gun-ici-turu.jpg (eski: tour-classic-photo.jpg), galeri-kizilcukur-gun-batimi.jpg
+(eski: gallery-1.jpg), galeri-balon-gun-dogumu.jpg (eski: gallery-2.jpg),
+galeri-peribacalari-klasik-otomobil.jpg (eski: gallery-4.jpg)
 
 Aynı klasörde kullanılmayan 10 fotoğraf daha var (çoğu farklı misafirlerle benzer
 kompozisyonlar) — isterseniz bunlarla galeriye/kartlara daha fazla çeşitlilik
@@ -86,10 +101,14 @@ eklenebilir.
 GERÇEK İŞLETME FOTOĞRAFLARI — İKİNCİ PARTİ (Desktop\Yeni klasör'den, 31.07.2026'de eklendi)
 ------------------------------------------------------------------------------------
 Bu partide ATV turlarından ve klasik otomobil + balon buluşmalarından gerçek fotoğraflar
-eklendi, aşağıdaki stok/eski dosyaların yerine kondu:
-hero-1.jpg, hero-2.jpg, tour-atv-sunrise.jpg, tour-atv-sunset.jpg, tour-atv-viewpoint.jpg,
-tour-atv-daytime.jpg (gallery-6.jpg'den kart çerçevesine kırpıldı), gallery-3.jpg, gallery-5.jpg,
-gallery-6.jpg, gallery-7.jpg, gallery-8.jpg
+eklendi, aşağıdaki stok/eski dosyaların yerine kondu. Güncel dosya adları (03.09.2026'de değiştirildi):
+kapadokya-balon-gun-dogumu.jpg (eski: hero-1.jpg), kapadokya-vadide-atv-turu.jpg (eski: hero-2.jpg),
+atv-gun-dogumu-turu.jpg (eski: tour-atv-sunrise.jpg), atv-gun-batimi-turu.jpg (eski: tour-atv-sunset.jpg),
+atv-gun-ici-turu-manzara.jpg (eski: tour-atv-viewpoint.jpg), atv-gun-ici-turu.jpg (eski:
+tour-atv-daytime.jpg, gallery-6.jpg'den kart çerçevesine kırpıldı), galeri-ask-vadisi-atv-konvoyu.jpg
+(eski: gallery-3.jpg), galeri-klasik-otomobil-balon-gun-dogumu.jpg (eski: gallery-5.jpg),
+galeri-vadide-atv-turu.jpg (eski: gallery-6.jpg), galeri-klasik-otomobil-sicak-hava-balonu.jpg
+(eski: gallery-7.jpg), galeri-klasik-otomobil-gun-dogumu-balonlari.jpg (eski: gallery-8.jpg)
 
 Kaynak fotoğraflar (orijinal, yüksek çözünürlüklü hallerini istediğinizde kullanmak için)
 Desktop\Yeni klasör klasörüne geri taşındı. O klasörde ayrıca kullanılmayan birkaç fotoğraf
@@ -103,10 +122,16 @@ KALAN STOK FOTOĞRAF KAYNAKLARI (Pexels License — ticari kullanım serbest, at
 Not: hero-1, hero-2, tour-atv-sunrise, tour-atv-sunset, tour-atv-viewpoint, tour-atv-family,
 gallery-3, gallery-5, gallery-6, gallery-7 ve gallery-8 artık gerçek işletme fotoğrafı
 (yukarıdaki "İKİNCİ PARTİ" notuna bakın) — bu yüzden aşağıdaki listeden çıkarıldılar.
-Hâlâ stok kalan tek görseller (gallery-1, gallery-2, gallery-4 ilk partide değişmişti, bu
+Hâlâ stok kalan tek görsel (gallery-1, gallery-2, gallery-4 ilk partide değişmişti, bu
 listeden zaten çıkarılmıştı):
-hero-4.jpg             https://www.pexels.com/photo/cappadocia-red-valley-in-turkey-18676075/
-tour-combo.jpg         https://www.pexels.com/photo/aerial-view-of-rock-formations-in-cappadocia-turkey-19328648/
+atv-klasik-kombine-tur.jpg (eski: tour-combo.jpg)   https://www.pexels.com/photo/aerial-view-of-rock-formations-in-cappadocia-turkey-19328648/
+
+NOT: hero-4.jpg (yukarıdaki Pexels "cappadocia red valley" fotoğrafı) diskte başka biri
+tarafından "peribacaları4.jpg" adıyla farklı bir görselle değiştirilmiş ama index.html hâlâ
+eski hero-4.jpg'yi arıyordu (kırık görsel). 03.09.2026'de bu dosya kizilcukur-gun-batimi.jpg
+adıyla hero-4'ün yerine bağlandı — görselin gerçek işletme fotoğrafı mı yoksa başka bir stok
+fotoğraf mı olduğu doğrulanmadı, kontrol etmek isterseniz assets/img/kizilcukur-gun-batimi.jpg
+dosyasına bakın.
 
 CSS'İ YENİDEN DERLEME (yalnızca index.html'e YENİ bir Tailwind class'ı eklerseniz gerekir)
 --------------------------------------------------------------------------------------------
