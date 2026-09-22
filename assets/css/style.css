@@ -104,6 +104,13 @@ h1, h2, h3, .font-display { font-family: 'Bahnschrift', 'Arial Narrow', sans-ser
   .hero-slide { transition: opacity 0.3s ease; }
   .hero-slide img, .hero-slide[data-active="true"] img { transform: none; transition: none; }
 }
+/* Mobile: arrows land on top of the CTA buttons on narrow screens; autoplay + dots
+   handle navigation there. Also drop the Ken Burns zoom so the hard-cropped landscape
+   photos don't read as over-scaled in the tall portrait hero. */
+@media (max-width: 640px) {
+  #hero-prev, #hero-next { display: none; }
+  .hero-slide img, .hero-slide[data-active="true"] img { transform: none; transition: opacity 1s ease; }
+}
 
 /* ---------- Cards ---------- */
 .tour-card { background: var(--surface); border: 1px solid var(--border); border-radius: 1.75rem; box-shadow: var(--shadow-soft); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s ease, box-shadow 0.3s ease; }
