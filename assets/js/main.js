@@ -4,7 +4,7 @@
 
   /* ---- WhatsApp link builder ---- */
   document.querySelectorAll(".wa-link").forEach(function (el) {
-    var text = el.getAttribute("data-wa-text") || "Merhaba! Golden Grape Travel hakkında bilgi almak istiyorum.";
+    var text = el.getAttribute("data-wa-text") || "Merhaba! Kapadokya ATV Tur hakkında bilgi almak istiyorum.";
     el.setAttribute("href", "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(text));
     el.setAttribute("target", "_blank");
     el.setAttribute("rel", "noopener noreferrer");
