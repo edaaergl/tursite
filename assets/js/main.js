@@ -8,6 +8,16 @@
     el.setAttribute("href", "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(text));
     el.setAttribute("target", "_blank");
     el.setAttribute("rel", "noopener noreferrer");
+    /* ---- Google Ads dönüşüm izleme: WhatsApp tıklaması ---- */
+    el.addEventListener("click", function () {
+      if (typeof gtag === "function") {
+        gtag("event", "conversion", {
+          send_to: "AW-18445027299/Zu23CMKhlIUdEOOPo9tE",
+          value: 1.0,
+          currency: "TRY"
+        });
+      }
+    });
   });
 
   /* ---- Theme toggle ---- */
