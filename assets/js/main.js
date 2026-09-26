@@ -20,6 +20,19 @@
     });
   });
 
+  /* ---- Google Ads dönüşüm izleme: telefon (tel:) tıklaması ---- */
+  document.querySelectorAll('a[href^="tel:"]').forEach(function (el) {
+    el.addEventListener("click", function () {
+      if (typeof gtag === "function") {
+        gtag("event", "conversion", {
+          send_to: "AW-18445027299/3ld0CNnwy4YdEOOPo9tE",
+          value: 1.0,
+          currency: "TRY"
+        });
+      }
+    });
+  });
+
   /* ---- Theme toggle ---- */
   var root = document.documentElement;
   var toggle = document.getElementById("theme-toggle");
